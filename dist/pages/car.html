@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSDN会员中心</title><link rel="stylesheet" href="../lib/public.css"><link rel="SHORTCUT ICON" href="../static/favicon32.ico" type="image/x-icon"><link rel="stylesheet" href="../css/car.css"></head><body><header><a href="./index.html"><img src="../static/csdn.gif" alt=""></a><ul class="firstUl"><li><a href="./index.html">首页</a></li><li><a href="./details.html">博客</a></li><li><a href="./details.html">专栏课程</a></li><li><a href="./details.html">下载</a></li><li><a href="./details.html">问答</a></li><li><a href="./details.html">社区</a></li><li class="more"><a href="javascript:;">更多</a><ol><li><a href="./details.html">论坛</a></li><li><a href="./details.html">代码</a></li><li><a href="./details.html">直播</a></li><li><a href="./details.html">chrome插件</a></li></ol></li></ul><p><input type="text" placeholder="如何用Python追到女朋友" style="width:520px"> <button></button></p><ul><li class="login"><a href="./login.html">登录/注册</a></li><li><a href="./car.html">会员中心</a></li><li><a href="javascript:;">收藏</a></li><li><a href="javascript:;">消息</a></li></ul><button class="docenter">创作中心<ol><li><a href="./details.html"><img src="../static/home.png" alt=""><br>写文章</a></li><li><a href="./details.html"><img src="../static/home.png" alt=""><br>发Blink</a></li><li><a href="./details.html"><img src="../static/home.png" alt=""><br>提问题</a></li><li><a href="./details.html"><img src="../static/home.png" alt=""><br>传资源</a></li><li><a href="./details.html"><img src="../static/home.png" alt=""><br>建项目</a></li></ol></button></header><!-- 头部结束 --><div class="car main"><div class="left"><dl><dt></dt><dd></dd><dd></dd></dl><dl><dt></dt><dd></dd><dd></dd></dl><dl><dt></dt><dd></dd><dd></dd></dl><dl><dt></dt><dd></dd><dd></dd></dl><dl><dt></dt><dd></dd><dd></dd></dl><dl><dt></dt><dd></dd><dd></dd></dl><dl><dt></dt><dd></dd><dd></dd></dl><dl><dt></dt><dd></dd><dd></dd></dl></div><!-- 购物车左侧结束 --><div class="right"><div class="pay"></div><div class="crod"><img src="../static/crod.png" alt=""></div></div><!-- 购物车右侧结束 --></div><div class="vip main"><img src="../static/copy.png" alt=""></div></body><script src="../lib/jquery-3.6.0.min.js"></script><script src="../lib/layer-v3.5.1/layer/layer.js"></script><script src="../lib/06-cookie.js"></script><script src="../js/car.js"></script><script>// 判断是否有cookie，有则设置用户名
+    if (getCookie('username')) {
+        var username = getCookie('username')
+        str = `<a  class="user1" style="display:inline;color:red;font-weight:800">Hi,${username}</a><a href="#" class="out" style="display:inline">退出</a>`
+        document.querySelector('.login').innerHTML = str;
+    }
+
+
+    $('.user1').click(function () {
+        $(this).attr('href', './index.html')
+        return false
+    })
+    $('.out').click(function () {
+        delCookie('username')
+        window.location.reload()
+    })</script></html>
